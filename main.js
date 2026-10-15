@@ -1,6 +1,13 @@
 import * as THREE from "three";
 import { gsap } from "gsap";
 const BLOCK_HEIGHT = 2.4;
+const STARTING_BLOCK_COLORS = [
+    0xe76f51,
+    0xf4a261,
+    0x2a9d8f,
+    0x6c63ff,
+    0x4a90e2,
+];
 
 function getRequiredElement(id) {
     const element = document.getElementById(id);
@@ -122,7 +129,10 @@ class Block {
             block?.colorOffset ?? Math.round(Math.random() * 100);
         // Color
         if (!block) {
-            this.color = 0x333344;
+            this.color =
+                STARTING_BLOCK_COLORS[
+                    Math.floor(Math.random() * STARTING_BLOCK_COLORS.length)
+                ];
         }
         else {
             const offset = this.index + this.colorOffset;
