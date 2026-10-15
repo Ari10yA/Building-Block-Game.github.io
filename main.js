@@ -33,7 +33,7 @@ class Stage {
         });
         this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         this.renderer.setSize(window.innerWidth, window.innerHeight);
-        this.renderer.setClearColor(0xd0cbc7, 1);
+        this.renderer.setClearColor(0xb58cff, 1);
         this.container.appendChild(this.renderer.domElement);
         // Scene
         this.scene = new THREE.Scene();
